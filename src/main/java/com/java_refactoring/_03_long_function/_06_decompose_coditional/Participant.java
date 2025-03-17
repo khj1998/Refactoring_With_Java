@@ -1,4 +1,4 @@
-package com.java_refactoring._03_long_function._05_replace_function_with_command;
+package com.java_refactoring._03_long_function._06_decompose_coditional;
 
 import java.util.HashMap;
 import java.util.Map;

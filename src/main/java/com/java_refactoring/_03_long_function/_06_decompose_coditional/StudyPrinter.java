@@ -1,4 +1,4 @@
-package com.java_refactoring._03_long_function._05_replace_function_with_command;
+package com.java_refactoring._03_long_function._06_decompose_coditional;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -6,11 +6,6 @@ import java.io.PrintWriter;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * refactoring smell : study 대시 보드 마크다운을 처리하는 함수를 객체로 감쌌다.
- * 절차적 함수를 커맨드 객체로 변환.
- * 객체의 동작/데이터를 캡슐화.
- */
 public class StudyPrinter {
 
     private int totalNumberOfEvents;
@@ -22,12 +17,12 @@ public class StudyPrinter {
         this.participants = participants;
     }
 
-    public void writeParticipantsToMarkDown() throws IOException {
+    public void execute() throws IOException {
         try (FileWriter fileWriter = new FileWriter("participants.md");
              PrintWriter writer = new PrintWriter(fileWriter)) {
             this.participants.sort(Comparator.comparing(Participant::username));
 
-            writer.print(header(participants.size()));
+            writer.print(header(this.participants.size()));
 
             this.participants.forEach(p -> {
                 String markdownForHomework = getMarkdownForParticipant(p);
