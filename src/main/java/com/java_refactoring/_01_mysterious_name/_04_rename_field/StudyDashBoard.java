@@ -1,4 +1,4 @@
-package com.java_refactoring._01_myserius_name._04_rename_field;
+package com.java_refactoring._01_mysterious_name._04_rename_field;
 
 import org.kohsuke.github.GHIssue;
 import org.kohsuke.github.GHIssueComment;

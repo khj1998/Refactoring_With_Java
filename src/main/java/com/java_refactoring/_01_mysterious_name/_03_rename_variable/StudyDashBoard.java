@@ -1,4 +1,4 @@
-package com.java_refactoring._01_myserius_name._03_rename_variable;
+package com.java_refactoring._01_mysterious_name._03_rename_variable;
 
 import org.kohsuke.github.GHIssue;
 import org.kohsuke.github.GHIssueComment;
