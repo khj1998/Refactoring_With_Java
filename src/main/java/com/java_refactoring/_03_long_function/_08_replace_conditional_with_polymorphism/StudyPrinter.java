@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * refactoring smell : 조건문을 다형성으로 수정.
+ * 조건문보다 원하는 결과를 명확하게 드러낼 수 있다.
+ */
 public abstract class StudyPrinter {
 
     protected int totalNumberOfEvents;
@@ -16,6 +20,9 @@ public abstract class StudyPrinter {
         this.participants.sort(Comparator.comparing(Participant::username));
     }
 
+    /**
+     * 런타임으로 구체 타입을 반환하기 위한 정적 팩터리 메서드.
+     */
     public static StudyPrinter createStudyPrinter(PrinterMode mode,int totalNumberOfEvents,List<Participant> participants) {
         switch (mode) {
             case CONSOLE -> {
