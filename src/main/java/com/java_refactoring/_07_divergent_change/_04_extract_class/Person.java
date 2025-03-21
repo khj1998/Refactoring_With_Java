@@ -1,38 +1,28 @@
-package me.whiteship.refactoring._07_divergent_change._26_extract_class;
+package com.java_refactoring._07_divergent_change._04_extract_class;
 
+/**
+ * refactoring smell : 연관된 데이터를 하나의 클래스로 추출해낸다.
+ * 자주 함께 변경되고 조회되는 데이터는 별도의 클래스로 추출할 것을 고려해 볼 만하다.
+ */
 public class Person {
 
     private String name;
 
-    private String officeAreaCode;
-
-    private String officeNumber;
-
-    public String telephoneNumber() {
-        return this.officeAreaCode + " " + this.officeNumber;
-    }
+    private TelephoneNumber telephoneNumber;
 
     public String name() {
         return name;
     }
 
-    public void setName(String name) {
+    public void updateName(String name) {
         this.name = name;
     }
 
-    public String officeAreaCode() {
-        return officeAreaCode;
+    public TelephoneNumber getTelephoneNumber() {
+        return this.telephoneNumber;
     }
 
-    public void setOfficeAreaCode(String officeAreaCode) {
-        this.officeAreaCode = officeAreaCode;
-    }
-
-    public String officeNumber() {
-        return officeNumber;
-    }
-
-    public void setOfficeNumber(String officeNumber) {
-        this.officeNumber = officeNumber;
+    public void initializeTelephoneNumber(TelephoneNumber telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
     }
 }
