@@ -29,6 +29,12 @@ public class ChinaExperienceVoyageRating extends VoyageRating {
 
     @Override
     protected int voyageProfitFactor() {
-        return super.voyageProfitFactor() + 3;
+        return super.voyageProfitFactor() + 4;
+    }
+
+    @Override
+    protected int voyageRisk() {
+        int result = super.voyageRisk() + 4;
+        return Math.max(result,0);
     }
 }

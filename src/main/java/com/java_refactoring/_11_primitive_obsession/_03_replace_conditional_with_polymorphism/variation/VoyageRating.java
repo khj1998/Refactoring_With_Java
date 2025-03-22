@@ -32,18 +32,8 @@ public class VoyageRating {
         return Math.max(result, 0);
     }
 
-    private int voyageRisk() {
-        int result = 1;
-        if (this.voyage.length() > 4) result += 2;
-        if (this.voyage.length() > 8) result += this.voyage.length() - 8;
-        if (List.of("china", "east-indies").contains(this.voyage.zone())) result += 4;
-        return Math.max(result, 0);
-    }
-
     protected int voyageProfitFactor() {
         int result = 2;
-        if (this.voyage.zone().equals("china")) result += 1;
-        if (this.voyage.zone().equals("east-indies")) result +=1 ;
         result += voyageLengthFactor();
         result += historyLengthFactor();
 
@@ -56,5 +46,12 @@ public class VoyageRating {
 
     protected int historyLengthFactor() {
         return (this.history.size() > 8) ? 1 : 0;
+    }
+
+    protected int voyageRisk() {
+        int result = 1;
+        if (this.voyage.length() > 4) result += 2;
+        if (this.voyage.length() > 8) result += this.voyage.length() - 8;
+        return Math.max(result, 0);
     }
 }
