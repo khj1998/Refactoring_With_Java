@@ -4,6 +4,7 @@ package com.java_refactoring._08_shotgun_surgery._03_inline_class;
  * refactoring smell : 클래스 인라인
  * 클래스 추출하기와 반대의 방식.
  * 클래스의 책임을 여러 클래스로 옮기다 보면, 클래스의 존재 이유가 빈약해지는 경우가 발생할 수 있다. (지나친 기능 분산으로 응집성 약화)
+ * 클래스로 쪼갠 결과, 상호 참조가 많아져 의존성이 증가하면 클래스 인라인을 고려해 보아야 한다.
  */
 public class Shipment {
 
