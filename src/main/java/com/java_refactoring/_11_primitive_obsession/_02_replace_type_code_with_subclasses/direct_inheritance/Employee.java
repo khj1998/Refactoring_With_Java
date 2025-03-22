@@ -1,4 +1,4 @@
-package com.java_refactoring._11_primitive_obsession._03_replace_type_code_with_subclasses.direct_inheritance;
+package com.java_refactoring._11_primitive_obsession._02_replace_type_code_with_subclasses.direct_inheritance;
 
 /**
  * refactoring smell : 필드의 타입이 아닌 다형성으로 구체 타입을 구분하도록 한다.
