@@ -1,0 +1,11 @@
+package com.java_refactoring._21_alternative_classes_with_different_interfaces._02_change_and_move_function;
+
+public class Shipping {
+    public String getOrder() {
+        return "Order 11231";
+    }
+
+    public String getEmail() {
+        return "aaa@email.com";
+    }
+}
