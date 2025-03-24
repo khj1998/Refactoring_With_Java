@@ -1,4 +1,4 @@
-package me.whiteship.refactoring._18_middle_man._40_replace_subclass_with_delegate;
+package com.java_refactoring._18_middle_man._01_before;
 
 import java.util.List;
 
